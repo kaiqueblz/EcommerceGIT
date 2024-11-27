@@ -1,146 +1,148 @@
-/* Global Reset */
+/* Reset básico */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body Styles */
+/* Estilo do corpo */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #0b0202;
-    color: #fff;
+    font-family: 'Roboto', sans-serif;
     line-height: 1.6;
+    color: #f4f4f4;
+    background-color: #121212;
+    overflow-x: hidden; /* Evitar barras de rolagem horizontais */
 }
 
-/* Hero Section */
-.hero {
-    background-image: url('R.jpg');
-    height: 510px;
-    background-size: cover;
-    background-position: center;
+/* Cabeçalho */
+header.hero {
+    text-align: center;
+    padding: 2rem 1rem;
+    background: linear-gradient(135deg, #1e1e1e, #3a3a3a);
+    color: #fff;
     position: relative;
 }
 
-.hero-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: white;
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    padding-top: 1rem;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #f4f4f4;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #fff;
+    background-color: #ff4a4a;
 }
 
 .hero-content h1 {
-    font-size: 64px;
-    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.7);
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    color: #ff4a4a;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
 }
 
 .hero-content p {
-    background-color: rgba(0, 0, 0, 0.6);
-    font-size: 20px;
-    padding: 16px 30px;
-    border-radius: 10px;
-    font-weight: 300;
-    margin-top: 15px;
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    opacity: 0.8;
 }
 
-/* Navigation Styles */
-.hero nav ul {
-    list-style-type: none;
-    text-align: center;
-    padding: 10px;
-    margin-top: 20px;
-}
-
-.hero nav li {
-    display: inline-block;
-    margin-left: 16px;
-}
-
-.hero nav a {
-    color: white;
-    text-decoration: none;
-    text-transform: uppercase;
-    padding: 12px 25px;
-    font-size: 14px;
-    letter-spacing: 2px;
-    background-color: rgba(0, 0, 0, 0.4);
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-.hero nav a:hover {
-    background-color: rgba(0, 0, 0, 0.7);
-}
-
-/* Main Section */
+/* Contêiner principal */
 .container {
-    width: 90%;
-    margin: auto;
+    padding: 2rem 1rem;
     max-width: 1200px;
+    margin: 0 auto;
 }
 
+/* Seções de categoria */
 .category-section {
-    margin-bottom: 40px;
+    margin-bottom: 3rem;
+    text-align: center;
 }
 
 .category-title {
-    font-size: 28px;
-    font-weight: 700;
-    margin-bottom: 20px;
-    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    color: #ff4a4a;
+    margin-bottom: 1rem;
     text-transform: uppercase;
-    color: #f307ff;
-    border-bottom: 2px solid #fa00d4;
-    padding-bottom: 10px;
+    letter-spacing: 1px;
+    position: relative;
 }
 
-a.link {
-    display: inline-block;
-    margin-top: 15px;
-    background-color: #7b7b7b;
-    color: white;
-    padding: 12px;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background-color 0.3s;
-    text-align: center;
+.category-title::after {
+    content: "";
+    width: 80px;
+    height: 4px;
+    background-color: #ff4a4a;
+    display: block;
+    margin: 0.5rem auto;
+    border-radius: 2px;
 }
 
-a.link:hover {
-    background-color: #5f5f5f;
-}
-
-/* Image Grid Styles */
 .platforms, .games, .consoles {
     display: flex;
-    flex-wrap: wrap;          /* Ensures images wrap to the next line if there's not enough space */
-    gap: 20px;                /* Spacing between images */
-    justify-content: center;  /* Centers the images horizontally */
-    margin-top: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
 }
 
+/* Imagens */
 .logo, .jogos, .consoles-img {
-    width: 100px;             /* Fixed size for each image */
+    width: 150px;
     height: auto;
-    border-radius: 8px;
-    transition: transform 0.3s ease;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
 .logo:hover, .jogos:hover, .consoles-img:hover {
-    transform: scale(1.1);
+    transform: scale(1.1) rotate(2deg);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5);
 }
 
-/* Footer Styles */
-footer {
-    background-color: #333;
-    color: white;
-    padding: 20px;
+/* Links */
+.link {
+    display: inline-block;
+    margin-top: 1.5rem;
+    color: #ff4a4a;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.1rem;
+    border: 2px solid #ff4a4a;
+    padding: 0.5rem 1.5rem;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+.link:hover {
+    background-color: #ff4a4a;
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(255, 74, 74, 0.5);
+}
+
+/* Rodapé */
+.footer {
+    background: #1e1e1e;
+    padding: 2rem;
     text-align: center;
-    font-size: 14px;
+    color: #bdbdbd;
 }
 
 .footer-content p {
-    margin-bottom: 10px;
+    margin-bottom: 0
 }
